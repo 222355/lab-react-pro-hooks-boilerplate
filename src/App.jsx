@@ -1,7 +1,7 @@
 
 import React,{useEffect,useState} from 'react';
 import './App.css';
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 
 // Do not change this
 const LARGE_NUMBER = 1000000000;
@@ -59,9 +59,9 @@ function App() {
     setList(testFunction);
   }
 
-  const styleTheme = {
-   backgroundColor:dark ? "black":"#ccc7c7",
-  }
+  const styleTheme =useMemo(()=>({
+    backgroundColor:dark ? "black":"#ccc7c7",
+  }),[dark]) 
 
   return (
     
