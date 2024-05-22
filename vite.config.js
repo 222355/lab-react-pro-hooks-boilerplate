@@ -6,6 +6,7 @@ export default defineConfig(() => {
     build: {
       outDir: 'build',
     },
+    base:"/lab-react-pro-hooks-boilerplate/",
     plugins: [react()],
   };
 });
